@@ -3,10 +3,9 @@ from urllib.parse import parse_qs, urlparse
 
 import requests
 
-from config import COOKIE
 from tools import get_formatted_size
 
-
+COOKIE = "PANWEB=1; csrfToken=; lang=en; TSID=; __bid_n=; _ga=; __stripe_mid=; ndus=; browserid==; ndut_fmt=; _ga_06ZNKL8C2E="
 def check_url_patterns(url):
     patterns = [
         r"ww\.mirrobox\.com",
