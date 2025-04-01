@@ -1,0 +1,65 @@
+{
+  "name": "ᴛᴇʀᴀʙᴏx ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ",
+  "description": "This is terabox media downloader bot.",
+  "logo": "https://files.catbox.moe/mtrkt5.jpg",
+  "repository": "https://github.com/TheChampu/TeraBoxDL",
+  "stack": "heroku-22",
+  "keywords": [
+    "telegram",
+    "downloader",
+    "pyrogram",
+    "bot",
+    "uploader"
+  ],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Make a bot from https://t.me/BotFather and enter the token here.",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org/apps",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org/apps",
+      "value": ""
+    },
+    "ADMINS": {
+      "description": "Your telegram id",
+      "value": "7006524418"
+    },
+    "HOST": {
+      "description": "redis url  Get This Value from http://redislabs.com/try-free ",
+      "value": ""
+    },
+    "PORT": {
+      "description": "redis url port.",
+      "value": ""
+    },
+    "COOKIE": {
+      "description": "get chrome dev tools. ",
+      "value": "PANWEB=1; csrfToken=; lang=en; TSID=; __bid_n=; _ga=; __stripe_mid=; ndus=; browserid==; ndut_fmt=; _ga_06ZNKL8C2E="
+    },
+    "PRIVATE_CHAT_ID": {
+      "description": "for download video store chat id.",
+      "value": ""
+    },
+    "PASSWORD": {
+      "description": "Redis Password, Get This Value from http://redislabs.com/try-free (If you don't know how to obtain these values a complete video tutorial is available here:- https://t.me/botzupdate/5)",
+      "value": ""
+    }
+  },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
